@@ -28,11 +28,14 @@ function display (html) {
     displayObject.innerHTML = html;
 }
 
-//Create a function to process the value (increment by 1), and make sure this happens
-// before the result displays to the user
 
-function processValue (i) {
-    var result = parseInt(i) +1;
-    return result;
+//application should write out from 1 up to the number input.
+
+function processValue (input) {
+  var output = "";
+  for (var i = 1; i <= input; i++) {
+    output += i + ", ";
+  }
+  return output.slice(0,-2);
 }
 
