@@ -28,14 +28,25 @@ function display (html) {
     displayObject.innerHTML = html;
 }
 
-
 //application should write out from 1 up to the number input.
 
 function processValue (input) {
   var output = "";
   for (var i = 1; i <= input; i++) {
-    output += i + ", ";
+      var currentValue = i;
+      if (i % 2 === 0) {
+          currentValue = "foo";
+      }
+      if (i % 3 === 0) {
+        currentValue = "bar";
+      }
+      if (i % 2 === 0 && i % 3 === 0) {
+        currentValue = "foo bar";
+      }
+    output += currentValue + ", ";
   }
   return output.slice(0,-2);
 }
+
+
 
